@@ -21,6 +21,10 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'wikitopian/hardmode'
 Plug 'kshenoy/vim-signature'
 Plug 'easymotion/vim-easymotion'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'justinmk/vim-sneak'
 
 " Initialize plugin system
 call plug#end()
