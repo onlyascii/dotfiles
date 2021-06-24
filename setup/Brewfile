@@ -16,6 +16,7 @@ brew "libass"
 brew "ffmpeg"
 brew "fzf"
 brew "go"
+brew "jump"
 brew "minikube"
 brew "neovim", args: ["HEAD"]
 brew "nodenv"
