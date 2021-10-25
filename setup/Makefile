@@ -18,6 +18,8 @@ init::
 link:
 	$(shell mkdir -p ~/.config/{nvim,tmux})
 	$(shell ln -nsf "$(dotfiles)/zshrc" ~/.zshrc)
+	$(shell ln -nsf "$(dotfiles)/zshrc.functions" ~/.zshrc.functions)
+	$(shell ln -nsf "$(dotfiles)/zshrc.gpg" ~/.zshrc.gpg)
 	$(shell ln -nsf "$(dotfiles)/p10k.zsh" ~/.p10k.zsh)
 	$(shell ln -nsf "$(dotfiles)/init.vim" ~/.config/nvim/init.vim)
 	$(shell ln -nsf "$(dotfiles)/coc-settings.json" ~/.config/nvim/coc-settings.json)
