@@ -16,7 +16,7 @@ init::
 	@ $(dotfiles_install)
 
 bundle:
-	$(shell brew bundle --file $(dotfiles)/Brefile)
+	$(shell brew bundle --file $(dotfiles)/Brewfile)
 
 link:
 	$(shell mkdir -p ~/.config/{nvim,tmux})
