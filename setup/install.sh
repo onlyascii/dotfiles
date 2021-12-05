@@ -4,10 +4,10 @@ export DOTFILES_PROJECT=${2:-dotfiles}
 export DOTFILES_BRANCH=${3:-master}
 export GITHUB_REPO="https://github.com/${DOTFILES_ORG}/${DOTFILES_PROJECT}.git"
 
-if [ "$DOTFILES_PROJECT" ] && [ -d "$DOTFILES_PROJECT" ]; then
-  echo "Removing existing $DOTFILES_PROJECT"
-  rm -rf "$DOTFILES_PROJECT"
+if [ -d ".$DOTFILES_PROJECT" ]; then
+  echo "Removing existing .$DOTFILES_PROJECT"
+  rm -rf ".$DOTFILES_PROJECT"
 fi
 
-echo "Cloning ${GITHUB_REPO}#${DOTFILES_BRANCH}..."
-git clone -c advice.detachedHead=false --depth=1 -b $DOTFILES_BRANCH $GITHUB_REPO
+echo "Cloning ${GITHUB_REPO}#${DOTFILES_BRANCH} to .$DOTFILES_PROJECT..."
+git clone -c advice.detachedHead=false --depth=1 -b $DOTFILES_BRANCH $GITHUB_REPO ".$DOTFILES_PROJECT"

@@ -1,5 +1,5 @@
 plug_vim="$(HOME)/.local/share/nvim/site/autoload/plug.vim"
-dotfiles="$(HOME)/dotfiles/setup"
+dotfiles="$(HOME)/.dotfiles/setup"
 export DOTFILES_ORG ?= onlyascii
 export DOTFILES_PROJECT ?= dotfiles
 export DOTFILES_BRANCH ?= master
