@@ -16,7 +16,7 @@ init::
 	@ $(dotfiles_install)
 
 bundle:
-	$(shell brew bundle --file $(dotfiles)/Brewfile)
+	brew bundle --file "$(dotfiles)/Brewfile"
 
 link:
 	$(shell mkdir -p ~/.config/{nvim,tmux})
@@ -35,4 +35,5 @@ link:
 	rm -rf ~/.tmux/plugins/tpm
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	~/.tmux/plugins/tpm/bin/install_plugins
+	cd $(HOME)/.vim/bundle/coc.nvim && yarn install && yarn build && cd $(HOME)
 	$(shell compaudit | xargs chmod g-w)
