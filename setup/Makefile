@@ -35,5 +35,5 @@ link:
 	rm -rf ~/.tmux/plugins/tpm
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	~/.tmux/plugins/tpm/bin/install_plugins
-	cd $(HOME)/.vim/bundle/coc.nvim && yarn install && yarn build && cd $(HOME)
+	cd $(HOME)/.vim/plugged/coc.nvim && yarn install && yarn build && cd $(HOME)
 	$(shell compaudit | xargs chmod g-w)
