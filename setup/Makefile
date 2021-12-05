@@ -15,6 +15,9 @@ endef
 init::
 	@ $(dotfiles_install)
 
+bundle:
+	$(shell brew bundle --file $(dotfiles)/Brefile)
+
 link:
 	$(shell mkdir -p ~/.config/{nvim,tmux})
 	$(shell ln -nsf "$(dotfiles)/zshrc" ~/.zshrc)
