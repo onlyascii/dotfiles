@@ -18,6 +18,9 @@ init::
 bundle:
 	brew bundle --file "$(dotfiles)/Brewfile"
 
+clean:
+	rm -rf $(dotfiles)
+
 link:
 	$(shell mkdir -p ~/.config/{nvim,tmux})
 	$(shell ln -nsf "$(dotfiles)/zshrc" ~/.zshrc)
